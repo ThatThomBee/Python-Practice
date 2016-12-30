@@ -7,16 +7,20 @@ var = 1
 foul_lan = [
 "piss", "shit", "fuck", "cunt", "cock", "clunge", "shite", "jizz", "cum", "muff"
 "panty", "minge", "wank", "trump", "bugger", "twat", "flap", "bum", "pussy", "sperm",
-"fart"
+"fart", "poo", "arse"
 ]
 
 animals = [
 "weasel", "snail", "kitten", "fox", "pup", "slug", "monkey", "whale", "pigeon",
-"fly", "falcoln", "hawk", "budgie", "ant", "womble"
+"fly", "falcoln", "hawk", "budgie", "ant", "womble", "cat", "dog"
 ]
 
 while var == 1:
-    print ("Let's receive a new insult to call your friends and nan.")
+    print ("""
+    Let's receive a new insult to call your friends and nan.
+
+    """
+    )
     time.sleep(2)
     swear = random.choice(foul_lan)
     suffix = random.choice(animals)
@@ -26,7 +30,6 @@ while var == 1:
     """
 
     Would you like to go again? Y/N...
-
     """
     )
     go_again = go_again.lower
