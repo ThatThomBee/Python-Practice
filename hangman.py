@@ -1,20 +1,26 @@
 import random
+import time
 
-wordbank = ["cat", "clock", "party", "sword", "butter"]
-
+wordbank = ["cat", "clock", "party", "sword", "butter", "tan", "pan", "utopia"]
 goes_left = 10
 
 print ("Hello! Let's play a game of hangman!")
 
+word = random.choice(wordbank)
+time.sleep(5)
+
 while goes_left != 0:
-    word = random.choice(wordbank)
+    word_len = len(word)
     print ("""
-    I'm thinking of a word.
-    The word has %d letters.
-    Would you like to guess one? You have %d goes.
+    The word I'm thinking of has %d letters.
+    You have 10 goes to guess letters.
     You can guess the word at any time.
     You have %d goes left!
-    """ % len(word), goes_left
+    """ % (word_len, goes_left)
     )
+    g_word = len(word) * "_ "
+    print (g_word)
+    guess_letter = input("Try to guess a letter!")
+    guess_letter = guess_letter.lower()
 
     goes_left = goes_left -1
